@@ -1,0 +1,15 @@
+group 'HackerRank'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "junit:junit-dep:4.10"
+    compile 'org.hamcrest:hamcrest-all:1.3'
+}
