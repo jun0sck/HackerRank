@@ -10,7 +10,13 @@ import java.util.Scanner;
 public class Solution {
 
     static String timeConversion(String s) {
-        return "";
+        if (s.endsWith("PM")) {
+            int hour = (s.startsWith("12")) ? 12 : Integer.valueOf(s.substring(0, 2)) + 12;
+            return hour + s.substring(2, s.length() - 2);
+        }
+
+        String hour = (s.startsWith("12")) ? "00" : s.substring(0, 2);
+        return hour + s.substring(2, s.length() - 2);
     }
 
     public static void main(String[] args) {
